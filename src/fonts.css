@@ -1,0 +1,13 @@
+/*
+ * BetterGov.ph brand typography (https://bettergov.ph/design)
+ *   Figtree        — display: titles, headings, figures (600 & 700 only)
+ *   Inter          — body & interface
+ *   JetBrains Mono — labels & metadata only, never sentences
+ */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-kapwa-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-kapwa-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}

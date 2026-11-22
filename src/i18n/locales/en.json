@@ -1,0 +1,28 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "services": "Services",
+    "language": "Language"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register"
+  },
+  "hero": {
+    "title": "Better Santo Tomas",
+    "subtitle": "A community-run portal for Santo Tomas, Pangasinan",
+    "cta": "Get Started"
+  },
+  "footer": {
+    "copyright": "© 2026 Better Santo Tomas. Community-run, not an official government website.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

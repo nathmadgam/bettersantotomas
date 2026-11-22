@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin '@tailwindcss/typography';
+
+@source '../node_modules/@bettergov/kapwa/dist';
+@import '@bettergov/kapwa/styles';
+
+/*
+ * BetterGov.ph brand tokens — https://bettergov.ph/design
+ * Ink, paper, one blue — and a red held in reserve.
+ * Token names mirror the upstream BetterGov.ph design system (ed-*).
+ */
+@theme {
+  /* Ink — headings and primary text */
+  --color-ed-ink: #0c1b33;
+  --color-ed-ink-2: #2b3a55;
+  --color-ed-ink-3: #252629;
+  --color-ed-ink-4: #8a95aa;
+
+  /* Rules — borders and dividers */
+  --color-ed-rule: #dbe3ef;
+  --color-ed-rule-strong: #9fb2cc;
+
+  /* Paper — most of every page is paper */
+  --color-ed-paper: #ffffff;
+  --color-ed-paper-2: #f4f7fc;
+  --color-ed-paper-3: #e6ecf5;
+
+  /* Republic Blue — the only interactive colour */
+  --color-ed-navy: #0b4fd9;
+  /* Band Navy — hero and masthead bands, flat, never a gradient */
+  --color-ed-navy-2: #0a44bd;
+  --color-ed-navy-ink: #08286e;
+  --color-ed-navy-tint: #e8efff;
+
+  /* Alert Red — urgency only: advisories and emergencies */
+  --color-ed-red: #c8102e;
+  --color-ed-red-ink: #8c0a20;
+
+  /* Rare editorial accents — never interactive */
+  --color-ed-sage: #4a6b5a;
+  --color-ed-gold: #b8893a;
+
+  /* Figtree speaks. Inter works. Mono labels. */
+  --font-display: 'Figtree', ui-sans-serif, sans-serif;
+
+  --container-page: 94rem; /* matches bettergov.ph max-w-page */
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-in: slideIn 0.5s ease-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-kapwa-sans);
+  --font-mono: var(--font-kapwa-mono);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Set by Navbar; keeps #anchor targets clear of the sticky header */
+    scroll-padding-top: calc(var(--header-height, 0px) + 1.5rem);
+  }
+
+  body {
+    @apply bg-ed-paper font-sans text-ed-ink;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-ed-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ed-navy);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    @apply bg-ed-navy-tint text-ed-ink;
+  }
+}
+
+/* Mono label: metadata only, never sentences */
+@utility eyebrow {
+  @apply font-mono text-[11px] font-medium tracking-[0.14em] uppercase;
+}
+
+/* Checklist styling */
+.task-list-item {
+  @apply text-base text-ed-ink-2 leading-relaxed relative flex items-start gap-3 font-sans mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;
+}
+
+/* Sticky table styling */
+.sticky-table {
+  min-width: max-content;
+}
+
+.sticky-table th:first-child,
+.sticky-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  width: var(--first-col-width, 12rem);
+  min-width: var(--first-col-width, 12rem);
+  background-color: var(--color-ed-paper);
+  border-right: 1px solid var(--color-ed-rule-strong);
+}
+
+.sticky-table thead th:first-child {
+  background-color: var(--color-ed-paper-2);
+}
+
+.sticky-table tbody tr:hover td:first-child {
+  background-color: var(--color-ed-paper-2);
+}

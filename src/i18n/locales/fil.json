@@ -1,0 +1,28 @@
+{
+  "common": {
+    "welcome": "Maligayang Pagdating",
+    "home": "Tahanan",
+    "about": "Tungkol",
+    "contact": "Makipag-ugnayan",
+    "services": "Mga Serbisyo",
+    "language": "Wika"
+  },
+  "navigation": {
+    "home": "Tahanan",
+    "about": "Tungkol",
+    "services": "Mga Serbisyo",
+    "contact": "Makipag-ugnayan",
+    "login": "Mag-login",
+    "register": "Magparehistro"
+  },
+  "hero": {
+    "title": "Better Santo Tomas",
+    "subtitle": "Portal na pinapatakbo ng komunidad para sa Santo Tomas, Pangasinan",
+    "cta": "Magsimula"
+  },
+  "footer": {
+    "copyright": "© 2026 Better Santo Tomas. Pinapatakbo ng komunidad, hindi opisyal na website ng pamahalaan.",
+    "privacy": "Patakaran sa Privacy",
+    "terms": "Mga Tuntunin ng Serbisyo"
+  }
+}

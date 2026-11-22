@@ -1,0 +1,10 @@
+# Department Pages
+# This file contains all the pages/governments available under the Department
+
+pages:
+  - name: 'Executive'
+    slug: 'executive'
+    description: 'The Mayor and Vice Mayor of Santo Tomas for the 2025 to 2028 term, and how to contact the Office of the Mayor.'
+  - name: 'Legislative'
+    slug: 'legislative'
+    description: 'The Sangguniang Bayan (Municipal Council) of Santo Tomas for the 2025 to 2028 term, presided over by the Vice Mayor.'
