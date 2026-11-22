@@ -5,7 +5,6 @@ import {
   ChevronDown,
   Globe,
   Search,
-  CheckCircle2,
 } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
@@ -128,9 +127,12 @@ const Navbar: React.FC = () => {
             className="flex items-center gap-3 no-underline"
             onClick={closeMenu}
           >
-            <CheckCircle2
-              className="h-10 w-10 shrink-0 text-ed-navy max-md:h-8 max-md:w-8"
-              aria-hidden
+            <img
+              src={`${import.meta.env.BASE_URL}logo.svg`}
+              alt=""
+              width={44}
+              height={44}
+              className="h-11 w-11 shrink-0 max-md:h-9 max-md:w-9"
             />
             <span className="font-display text-xl font-bold leading-tight tracking-[-0.01em] text-ed-ink max-md:text-lg">
               {import.meta.env.VITE_GOVERNMENT_NAME}

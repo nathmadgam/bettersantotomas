@@ -4,7 +4,6 @@ import {
   Twitter,
   Instagram,
   Youtube,
-  CheckCircle2,
 } from 'lucide-react';
 import { footerNavigation } from '../../data/navigation';
 import { Link } from 'react-router';
@@ -38,7 +37,13 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 gap-10 border-b border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-[2fr_repeat(3,1fr)] max-md:gap-8 max-md:pb-8">
           <div>
             <div className="flex items-center gap-3">
-              <CheckCircle2 className="h-10 w-10 text-white" aria-hidden />
+              <img
+                src={`${import.meta.env.BASE_URL}logo-white.svg`}
+                alt=""
+                width={44}
+                height={44}
+                className="h-11 w-11 shrink-0"
+              />
               <div>
                 <div className="font-display text-lg font-bold text-white">
                   {t('site_name')}
